@@ -12,15 +12,21 @@
     HINT: Lookup .attr()
     */
     $(function() {
-      // Write code here
+      const $iframe = $('#iframe');
+      const $link = $('a');
+      $link.click(function (e) {
+        e.preventDefault();
+        let url = $(this).attr('href');
+        $('#iframe').attr('src', url);
+      });
     });
     </script>
   </head>
   <body>
     <ul>
-      <li><a href="http://hellohappy.org">Hello Happy</a></li>
-      <li><a href="http://duckduckgo.com">DuckDuckGo</a></li>
-      <li><a href="http://css-tricks.com">CSS Tricks</a></li>
+      <li><a href="http://hellohappy.org" id="link">Hello Happy</a></li>
+      <li><a href="http://duckduckgo.com" id="link">DuckDuckGo</a></li>
+      <li><a href="http://css-tricks.com" id="link">CSS Tricks</a></li>
     </ul>
     <iframe id="iframe" src="http://hellohappy.org" width="800" height="480"></iframe>
   </body>
