@@ -11,7 +11,11 @@
     (Make it toggle back and forth between hidden and show)
     */
     $(function() {
-      // Write code here
+      const $header1 = $('#accordion');
+      const $header2 = $('#section');
+      $header1.click(function () {
+        $header2.fadeToggle(100);
+      })
     });
     </script>
 
